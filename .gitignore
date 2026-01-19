@@ -1,0 +1,30 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# IntelliJ IDEA files
+.idea/
+*.iml
+
+# Eclipse files
+.project
+.classpath
+.settings/
+
+# NetBeans files
+ nbproject/private/
+
+# Maven files
+target/
+
+# Gradle files
+build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
