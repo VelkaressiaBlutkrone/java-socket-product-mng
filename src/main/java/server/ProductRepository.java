@@ -26,7 +26,7 @@ public class ProductRepository {
         String sql = "select * from product";
         List<Product> list = new ArrayList<>();
         try (PreparedStatement pstmt = Objects.requireNonNull(conn).prepareStatement(sql);
-             ResultSet rs = pstmt.executeQuery()) {
+                ResultSet rs = pstmt.executeQuery()) {
             while (rs.next()) {
                 Product product = Product.builder()
                         .id(rs.getInt("id"))
@@ -45,7 +45,7 @@ public class ProductRepository {
     Product findById(int id) throws SQLException {
         String sql = "select * from product where id = ?";
         try (PreparedStatement pstmt = Objects.requireNonNull(conn).prepareStatement(sql)) {
-            pstmt.setInt(1,id);
+            pstmt.setInt(1, id);
 
             ResultSet rs = pstmt.executeQuery();
             rs.next();
@@ -62,8 +62,8 @@ public class ProductRepository {
     }
 
     int delete(int id) throws SQLException {
-        String sql  = "delete from product where id = ?";
-        try(PreparedStatement pstmt = Objects.requireNonNull(conn).prepareStatement(sql)){
+        String sql = "delete from product where id = ?";
+        try (PreparedStatement pstmt = Objects.requireNonNull(conn).prepareStatement(sql)) {
             pstmt.setInt(1, id);
             return pstmt.executeUpdate();
         }

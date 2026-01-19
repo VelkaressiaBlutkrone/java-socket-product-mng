@@ -1,9 +1,5 @@
 package server;
 
-import com.google.gson.Gson;
-import dto.RequestDto;
-import dto.ResponseDto;
-
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -11,6 +7,11 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.List;
 import java.util.Scanner;
+
+import com.google.gson.Gson;
+
+import dto.RequestDto;
+import dto.ResponseDto;
 
 public class MyServer {
     public static void main(String[] args) {
@@ -28,33 +29,33 @@ public class MyServer {
         }
     }
 
-    private static void handler(Socket socket){
+    private static void handler(Socket socket) {
         try (Scanner in = new Scanner(new InputStreamReader(socket.getInputStream()));
-             PrintWriter out = new PrintWriter(socket.getOutputStream(), true)){
+                PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
             ResponseDto resDto = null;
 
-            while (in.hasNextLine()){
+            while (in.hasNextLine()) {
                 String line = in.nextLine();
                 System.out.println(line);
 
                 RequestDto reqDto = jsonToRequestDto(line);
                 System.out.println(reqDto);
 
-                if(reqDto.getMethod().equals("get")){
-                    if(reqDto.getQuerystring() == null){
+                if (reqDto.getMethod().equals("get")) {
+                    if (reqDto.getQuerystring() == null) {
                         resDto = selectAll();
                     } else {
                         System.out.println("select detail call");
                         resDto = select(reqDto);
                     }
-                } else if(reqDto.getMethod().equals("delete")){
-                    if(reqDto.getQuerystring() != null){
+                } else if (reqDto.getMethod().equals("delete")) {
+                    if (reqDto.getQuerystring() != null) {
                         resDto = delete(reqDto);
                     } else {
 
                     }
-                } else if(reqDto.getMethod().equals("post")) {
-                    if(reqDto.getBody() != null){
+                } else if (reqDto.getMethod().equals("post")) {
+                    if (reqDto.getBody() != null) {
                         resDto = insert(reqDto);
                     } else {
 
@@ -72,8 +73,8 @@ public class MyServer {
         }
     }
 
-    private static ResponseDto insert(RequestDto dto){
-        try{
+    private static ResponseDto insert(RequestDto dto) {
+        try {
             ProductService service = new ProductService();
             service.ProductAdd(dto.getBody().getName(), dto.getBody().getPrice(), dto.getBody().getQty());
             return ResponseDto.builder()
@@ -100,7 +101,7 @@ public class MyServer {
                 .build();
     }
 
-    private static ResponseDto selectAll(){
+    private static ResponseDto selectAll() {
         try {
             ProductService service = new ProductService();
             List<Product> list = service.ProductList();
@@ -120,20 +121,20 @@ public class MyServer {
                 .build();
     }
 
-    private static ResponseDto delete(RequestDto dto){
+    private static ResponseDto delete(RequestDto dto) {
         ProductService service = new ProductService();
-         service.ProductDelete(dto.getQuerystring().getId());
+        service.ProductDelete(dto.getQuerystring().getId());
         return ResponseDto.builder()
                 .msg("ok")
                 .body("")
                 .build();
     }
 
-    private static RequestDto jsonToRequestDto (String json){
+    private static RequestDto jsonToRequestDto(String json) {
         return new Gson().fromJson(json, RequestDto.class);
     }
 
-    private static String responseDtoToJson(ResponseDto dto){
+    private static String responseDtoToJson(ResponseDto dto) {
         return new Gson().toJson(dto);
     }
 }

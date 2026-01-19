@@ -7,7 +7,7 @@ public class ProductService implements ProductServiceInterface {
     private final ProductRepository repository = new ProductRepository();
 
     @Override
-    public void ProductAdd(String name, int price, int qty){
+    public void ProductAdd(String name, int price, int qty) {
         Product product = Product.builder()
                 .name(name)
                 .price(price)
@@ -40,7 +40,7 @@ public class ProductService implements ProductServiceInterface {
     }
 
     @Override
-    public void ProductDelete(int id){
+    public void ProductDelete(int id) {
         try {
             repository.delete(id);
         } catch (SQLException e) {

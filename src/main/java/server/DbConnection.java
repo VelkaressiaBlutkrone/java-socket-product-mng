@@ -14,7 +14,7 @@ public class DbConnection {
         try {
             // new 클래스명();
             Class.forName("com.mysql.cj.jdbc.Driver");
-            // conn =  프로토콜이 적용된 소켓
+            // conn = 프로토콜이 적용된 소켓
             Connection conn = DriverManager.getConnection(url, username, password);
             System.out.println("성공");
             return conn;
