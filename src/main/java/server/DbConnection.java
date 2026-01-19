@@ -3,7 +3,13 @@ package server;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import client.MyClient;
+
 public class DbConnection {
+    private static final Logger logger = LoggerFactory.getLogger(MyClient.class);
 
     // 책임 : 데이터베이스 연결 소켓을 리턴함
     public static Connection getConnection() {
@@ -19,7 +25,7 @@ public class DbConnection {
             System.out.println("성공");
             return conn;
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.atTrace().setCause(e).log(e.getMessage());
         }
         return null;
     }

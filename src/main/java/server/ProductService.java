@@ -3,7 +3,11 @@ package server;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ProductService implements ProductServiceInterface {
+    private static final Logger logger = LoggerFactory.getLogger(ProductRepository.class);
     private final ProductRepository repository = new ProductRepository();
 
     @Override
@@ -16,7 +20,7 @@ public class ProductService implements ProductServiceInterface {
         try {
             repository.insert(product);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            logger.atTrace().setCause(e).log(e.getMessage());
         }
     }
 
@@ -25,7 +29,8 @@ public class ProductService implements ProductServiceInterface {
         try {
             return repository.findByAll();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            logger.atTrace().setCause(e).log(e.getMessage());
+            return null;
         }
     }
 
@@ -34,7 +39,8 @@ public class ProductService implements ProductServiceInterface {
         try {
             return repository.findById(id);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            logger.atTrace().setCause(e).log(e.getMessage());
+            return null;
         }
     }
 
@@ -43,7 +49,7 @@ public class ProductService implements ProductServiceInterface {
         try {
             repository.delete(id);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            logger.atTrace().setCause(e).log(e.getMessage());
         }
     }
 }

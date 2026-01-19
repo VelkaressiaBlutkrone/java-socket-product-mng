@@ -8,13 +8,19 @@ import java.net.Socket;
 import java.util.List;
 import java.util.Scanner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.google.gson.Gson;
 
 import dto.RequestDto;
 import dto.ResponseDto;
 
 public class MyServer {
+    private static final Logger logger = LoggerFactory.getLogger(MyServer.class);
+
     public static void main(String[] args) {
+
         try (ServerSocket serverSocket = new ServerSocket(20000)) {
             System.out.println("[Server] 상품 관리 서버 시작 (Port: 20000)");
 
@@ -25,7 +31,7 @@ public class MyServer {
                 handler(socket);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.atTrace().setCause(e).log(e.getMessage());
         }
     }
 
@@ -69,7 +75,7 @@ public class MyServer {
 
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            logger.atTrace().setCause(e).log(e.getMessage());
         }
     }
 
@@ -82,7 +88,7 @@ public class MyServer {
                     .body(null)
                     .build();
         } catch (RuntimeException e) {
-            e.printStackTrace();
+            logger.atTrace().setCause(e).log(e.getMessage());
         }
 
         return ResponseDto.builder()
@@ -112,7 +118,7 @@ public class MyServer {
                     .body(array)
                     .build();
         } catch (RuntimeException e) {
-            e.printStackTrace();
+            logger.atTrace().setCause(e).log(e.getMessage());
         }
 
         return ResponseDto.builder()
