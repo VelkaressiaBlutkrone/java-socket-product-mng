@@ -75,7 +75,7 @@ public class MyClient {
 
                             out.println(reqStr);
 
-                            System.out.println("상품이 추가 되었습니다.");
+                            logger.atInfo().log("상품이 추가 되었습니다.");
                         } catch (Exception e) {
                             logger.atTrace().setCause(e).log("Exception occurred");
                         }
@@ -91,7 +91,7 @@ public class MyClient {
 
                         out.println(reqStr);
 
-                        System.out.println("상품이 삭제 되었습니다.");
+                        logger.atInfo().log("상품이 삭제 되었습니다.");
                     }
                         break;
                     default: {
@@ -103,7 +103,7 @@ public class MyClient {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.atError().setCause(e).log("예외 발생");
         }
     }
 

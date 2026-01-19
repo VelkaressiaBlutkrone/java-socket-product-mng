@@ -13,7 +13,6 @@ public class ProductService implements ProductServiceInterface {
                 .price(price)
                 .qty(qty)
                 .build();
-
         try {
             repository.insert(product);
         } catch (SQLException e) {
