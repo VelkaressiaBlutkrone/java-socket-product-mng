@@ -14,7 +14,7 @@ MySQL 데이터베이스에 저장된 상품 정보를 관리합니다.
 ---
 
 ## 🏗️ 구성 (Project Structure)
-
+```
 java-socket-product-mng/
 ├── src/main/java/
 │   ├── client/
@@ -32,7 +32,7 @@ java-socket-product-mng/
 │       └── ResponseDto.java       # 서버 응답 DTO
 ├── build.gradle                   # Gradle 의존성 설정
 └── settings.gradle                # Gradle 설정
-
+```
 ### 사용 기술 & 라이브러리
 - **언어**: Java
 - **빌드 도구**: Gradle
