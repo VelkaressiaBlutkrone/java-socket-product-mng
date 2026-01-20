@@ -135,17 +135,19 @@ java -cp build/libs/java-socket-product-mng-1.0-SNAPSHOT.jar client.MyClient
 ### 요청 (RequestDto)
 
 ```
-{  "method": "get|post|delete",
-  "querystring": {"id": 1},
-  "body": {"name": "상품명", "price": 10000, "qty": 5}
+{
+    "method": "get|post|delete",
+    "querystring": {"id": 1},
+    "body": {"name": "상품명", "price": 10000, "qty": 5}
 }
 ```
 
 ### 응답 (ResponseDto)
 
 ```
-{  "msg": "ok|error",
-  "body": "JSON 형태의 데이터"
+{
+    "msg": "ok|error",
+    "body": "JSON 형태의 데이터"
 }
 ```
 
