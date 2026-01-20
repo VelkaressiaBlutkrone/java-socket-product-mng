@@ -57,17 +57,14 @@ java-socket-product-mng/
 ### 1단계: 데이터베이스 설정
 
 MySQL에 접속하여 다음 명령어 실행:
-```
+
+```sql
 -- 데이터베이스 생성
 CREATE DATABASE productdb;
-```
 
-```
 -- 데이터베이스 선택
 USE productdb;
-```
 
-```
 -- 상품 테이블 생성
 CREATE TABLE product (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -75,9 +72,7 @@ CREATE TABLE product (
     price INT NOT NULL,
     qty INT NOT NULL
 );
-```
 
-```sql
 -- 초기 샘플 데이터 삽입 (선택)
 INSERT INTO product (name, price, qty) VALUES ('상품1', 10000, 5);
 INSERT INTO product (name, price, qty) VALUES ('상품2', 20000, 3);
