@@ -78,9 +78,8 @@ CREATE TABLE product (
 );
 ```
 
--- 초기 샘플 데이터 삽입 (선택)
-
 ```sql
+-- 초기 샘플 데이터 삽입 (선택)
 INSERT INTO product (name, price, qty) VALUES ('상품1', 10000, 5);
 INSERT INTO product (name, price, qty) VALUES ('상품2', 20000, 3);
 ```
