@@ -64,7 +64,6 @@ CREATE DATABASE productdb;
 
 ```
 -- 데이터베이스 선택
-
 USE productdb;
 ```
 
