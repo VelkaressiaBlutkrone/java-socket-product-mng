@@ -23,8 +23,8 @@ public class MyClient {
             logger.atInfo().log("====== 상품 관리 시스템 접속 ======");
 
             while (true) {
-                System.out.println("\n1.목록조회 2.상세조회  3.추가  4.삭제  5.종료");
-                System.out.print("번호입력 >> ");
+                logger.atDebug().log("\n1.목록조회 2.상세조회  3.추가  4.삭제  5.종료");
+                logger.atDebug().log("번호입력 >> ");
                 String menu = sc.nextLine();
 
                 if (menu.equals("5")) {
@@ -42,7 +42,7 @@ public class MyClient {
                     }
                         break;
                     case "2": {
-                        System.out.print("아이디 입력(숫자) >> ");
+                        logger.atDebug().log("아이디 입력(숫자) >> ");
                         String prdId = sc.nextLine();
                         if (!prdId.isEmpty()) {
                             try {
@@ -60,11 +60,11 @@ public class MyClient {
                         break;
                     case "3": {
                         try {
-                            System.out.println("등록할 상품을 입력하세요. >>");
+                            logger.atDebug().log("등록할 상품을 입력하세요. >>");
                             String name = sc.nextLine();
-                            System.out.println("등록할 가격을 입력하세요. >>");
+                            logger.atDebug().log("등록할 가격을 입력하세요. >>");
                             String price = sc.nextLine();
-                            System.out.println("등록할 개수을 입력하세요. >>");
+                            logger.atDebug().log("등록할 개수을 입력하세요. >>");
                             String qty = sc.nextLine();
 
                             String reqStr = ClientService.reqDtoToJson("post", null, RequestDto.Body.builder()
@@ -82,7 +82,7 @@ public class MyClient {
                     }
                         break;
                     case "4": {
-                        System.out.println("삭제할 상품의 아이디를 입력하세요. >>");
+                        logger.atDebug().log("삭제할 상품의 아이디를 입력하세요. >>");
                         String id = sc.nextLine();
                         String reqStr = ClientService.reqDtoToJson("delete",
                                 RequestDto.QueryString.builder().id(Integer.parseInt(id)).build(),

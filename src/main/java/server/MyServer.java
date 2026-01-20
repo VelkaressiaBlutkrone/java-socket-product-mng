@@ -22,11 +22,11 @@ public class MyServer {
     public static void main(String[] args) {
 
         try (ServerSocket serverSocket = new ServerSocket(20000)) {
-            System.out.println("[Server] 상품 관리 서버 시작 (Port: 20000)");
+            logger.atInfo().log("[Server] 상품 관리 서버 시작 (Port: 20000)");
 
             while (true) {
                 Socket socket = serverSocket.accept();
-                System.out.println("[Server] 클라이언트 접속: " + socket.getInetAddress());
+                logger.atInfo().log("[Server] 클라이언트 접속: " + socket.getInetAddress());
 
                 handler(socket);
             }
@@ -42,16 +42,14 @@ public class MyServer {
 
             while (in.hasNextLine()) {
                 String line = in.nextLine();
-                System.out.println(line);
+                logger.atInfo().log(line);
 
                 RequestDto reqDto = jsonToRequestDto(line);
-                System.out.println(reqDto);
 
                 if (reqDto.getMethod().equals("get")) {
                     if (reqDto.getQuerystring() == null) {
                         resDto = selectAll();
                     } else {
-                        System.out.println("select detail call");
                         resDto = select(reqDto);
                     }
                 } else if (reqDto.getMethod().equals("delete")) {
