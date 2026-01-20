@@ -15,6 +15,7 @@ MySQL 데이터베이스에 저장된 상품 정보를 관리합니다.
 
 ## 🏗️ 구성 (Project Structure)
 
+```
 java-socket-product-mng/
 ├── src/main/java/
 │   ├── client/
@@ -42,6 +43,7 @@ java-socket-product-mng/
 - **로깅**: SLF4J, Logback
 - **유틸리티**: Lombok
 - **드라이버**: MySQL JDBC Connector
+```
 
 ---
 
