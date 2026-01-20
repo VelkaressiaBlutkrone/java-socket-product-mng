@@ -101,7 +101,7 @@ public class MyClient {
                     }
                         break;
                     default: {
-
+                        logger.atInfo().log("잘못된 번호를 입력하였습니다.");
                     }
                         break;
                 }

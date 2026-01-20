@@ -342,3 +342,10 @@ java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" becaus
 2026-01-20 14:39:56.231 [main] INFO  client.MyClient - 
 1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
 2026-01-20 14:39:56.231 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:42:31.888 [main] INFO  server.MyServer - [Server] 상품 관리 서버 시작 (Port: 20000)
+2026-01-20 14:42:33.321 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:42:33.324 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:42:33.325 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:42:33.325 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:42:36.014 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 종료 ======
