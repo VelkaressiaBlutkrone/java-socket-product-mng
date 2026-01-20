@@ -1,5 +1,8 @@
 package server;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,6 +12,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class ProductRepository {
+    private static final Logger logger = LoggerFactory.getLogger(ProductRepository.class);
     private final Connection conn = DbConnection.getConnection();
 
     int insert(Product product) throws SQLException {
@@ -38,7 +42,7 @@ public class ProductRepository {
                 list.add(product);
             }
         }
-
+        logger.atInfo().log("findByAll size" + list.size());
         return list;
     }
 

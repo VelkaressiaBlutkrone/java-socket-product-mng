@@ -69,6 +69,7 @@ public class MyServer {
                 }
 
                 String res = responseDtoToJson(resDto);
+                logger.atInfo().log("server response=" + res);
                 out.println(res);
             }
         } catch (IOException e) {
@@ -109,6 +110,8 @@ public class MyServer {
             ProductService service = new ProductService();
             List<Product> list = service.ProductList();
             String array = new Gson().toJson(list);
+
+            logger.atInfo().log("findbyAll : " + array);
 
             return ResponseDto.builder()
                     .msg("ok")

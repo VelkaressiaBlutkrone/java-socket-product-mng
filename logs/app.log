@@ -1,1 +1,344 @@
-2026-01-19 17:33:56.104 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:05:19.550 [main] INFO  server.MyServer - [Server] 상품 관리 서버 시작 (Port: 20000)
+2026-01-20 14:05:22.932 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:05:22.936 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:07:39.687 [main] INFO  server.MyServer - [Server] 상품 관리 서버 시작 (Port: 20000)
+2026-01-20 14:07:46.179 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:07:46.184 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:07:46.184 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:07:46.184 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:07:51.278 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:07:51.728 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:07:51.728 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:08:07.721 [main] INFO  client.MyClient - 아이디 입력(숫자) >> 
+2026-01-20 14:08:08.610 [main] INFO  server.MyServer - {"method":"get","querystring":{"id":1}}
+2026-01-20 14:08:08.638 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:08:08.638 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:08:40.336 [main] INFO  client.MyClient - 등록할 상품을 입력하세요. >>
+2026-01-20 14:08:44.144 [main] INFO  client.MyClient - 등록할 가격을 입력하세요. >>
+2026-01-20 14:08:45.953 [main] INFO  client.MyClient - 등록할 개수을 입력하세요. >>
+2026-01-20 14:08:46.587 [main] INFO  client.MyClient - 상품이 추가 되었습니다.
+2026-01-20 14:08:46.587 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:08:46.587 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:08:46.587 [main] INFO  server.MyServer - {"method":"post","body":{"price":4,"name":"df","qty":6}}
+2026-01-20 14:08:47.498 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:08:47.499 [main] ERROR client.MyClient - 예외 발생
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "list" is null
+	at client.ClientService.selectAll(ClientService.java:24)
+	at client.MyClient.main(MyClient.java:41)
+2026-01-20 14:09:22.566 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:09:22.569 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:09:22.570 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:09:22.570 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:09:24.362 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:09:24.374 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:09:24.380 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:09:27.849 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:09:27.859 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:09:27.859 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:09:32.086 [main] INFO  client.MyClient - 등록할 상품을 입력하세요. >>
+2026-01-20 14:09:34.136 [main] INFO  client.MyClient - 등록할 가격을 입력하세요. >>
+2026-01-20 14:09:35.023 [main] INFO  client.MyClient - 등록할 개수을 입력하세요. >>
+2026-01-20 14:09:35.514 [main] INFO  client.MyClient - 상품이 추가 되었습니다.
+2026-01-20 14:09:35.514 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:09:35.514 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:09:35.514 [main] INFO  server.MyServer - {"method":"post","body":{"price":4,"name":"h","qty":3}}
+2026-01-20 14:09:36.461 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:09:36.461 [main] ERROR client.MyClient - 예외 발생
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "list" is null
+	at client.ClientService.selectAll(ClientService.java:24)
+	at client.MyClient.main(MyClient.java:41)
+2026-01-20 14:10:47.649 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:10:47.653 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:10:47.653 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:10:47.653 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:10:51.426 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:10:51.437 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:10:51.437 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:11:00.249 [main] INFO  client.MyClient - 삭제할 상품의 아이디를 입력하세요. >>
+2026-01-20 14:11:02.586 [main] INFO  client.MyClient - 상품이 삭제 되었습니다.
+2026-01-20 14:11:02.586 [main] INFO  server.MyServer - {"method":"delete","querystring":{"id":5}}
+2026-01-20 14:11:02.586 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:11:02.586 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:11:04.054 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:11:04.056 [main] ERROR client.MyClient - 예외 발생
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "list" is null
+	at client.ClientService.selectAll(ClientService.java:24)
+	at client.MyClient.main(MyClient.java:41)
+2026-01-20 14:11:56.999 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:11:57.002 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:11:57.003 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:11:57.003 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:12:00.085 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:12:00.105 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:12:00.105 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:12:01.257 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:12:01.293 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:12:01.294 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:12:02.429 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:12:02.434 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:12:02.434 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:12:05.742 [main] INFO  client.MyClient - 아이디 입력(숫자) >> 
+2026-01-20 14:12:07.663 [main] INFO  server.MyServer - {"method":"get","querystring":{"id":1}}
+2026-01-20 14:12:07.673 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:12:07.673 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:12:09.433 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:12:09.444 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:12:09.444 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:13:52.071 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:13:52.071 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:13:52.071 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:13:52.071 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:13:56.178 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:13:56.187 [main] INFO  client.MyClient - {"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3}]"}
+2026-01-20 14:15:22.100 [main] INFO  server.MyServer - [Server] 상품 관리 서버 시작 (Port: 20000)
+2026-01-20 14:15:24.882 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:15:24.890 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:15:24.890 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:15:24.890 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:15:28.776 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:15:29.076 [main] INFO  client.MyClient - {"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3}]"}
+2026-01-20 14:16:17.527 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:16:17.530 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:16:17.531 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:16:17.531 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:16:20.025 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:16:20.037 [main] INFO  client.MyClient - {"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3}]"}
+2026-01-20 14:16:20.045 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:16:20.045 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:16:26.208 [main] INFO  client.MyClient - 등록할 상품을 입력하세요. >>
+2026-01-20 14:16:28.863 [main] INFO  client.MyClient - 등록할 가격을 입력하세요. >>
+2026-01-20 14:16:30.879 [main] INFO  client.MyClient - 등록할 개수을 입력하세요. >>
+2026-01-20 14:16:31.680 [main] INFO  client.MyClient - 상품이 추가 되었습니다.
+2026-01-20 14:16:31.680 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:16:31.680 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:16:31.680 [main] INFO  server.MyServer - {"method":"post","body":{"price":4,"name":"h","qty":3}}
+2026-01-20 14:16:33.343 [main] INFO  client.MyClient - {"msg":"ok"}
+2026-01-20 14:16:33.343 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:16:33.345 [main] ERROR client.MyClient - 예외 발생
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "list" is null
+	at client.ClientService.selectAll(ClientService.java:24)
+	at client.MyClient.main(MyClient.java:43)
+2026-01-20 14:21:14.223 [main] INFO  server.MyServer - [Server] 상품 관리 서버 시작 (Port: 20000)
+2026-01-20 14:21:18.538 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:21:18.538 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:21:18.554 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:21:18.554 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:21:21.993 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:21:22.288 [main] INFO  server.ProductRepository - list
+2026-01-20 14:21:22.294 [main] INFO  client.MyClient - {"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":7,\"name\":\"h\",\"price\":4,\"qty\":3}]"}
+2026-01-20 14:21:22.307 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:21:22.307 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:22:05.038 [main] INFO  server.MyServer - [Server] 상품 관리 서버 시작 (Port: 20000)
+2026-01-20 14:22:10.289 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:22:10.293 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:22:10.293 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:22:10.293 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:22:14.086 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:22:14.367 [main] INFO  server.ProductRepository - list
+2026-01-20 14:22:14.387 [main] INFO  client.MyClient - {"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":7,\"name\":\"h\",\"price\":4,\"qty\":3}]"}
+2026-01-20 14:22:14.396 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:22:14.396 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:22:19.488 [main] INFO  client.MyClient - 등록할 상품을 입력하세요. >>
+2026-01-20 14:22:23.095 [main] INFO  client.MyClient - 등록할 가격을 입력하세요. >>
+2026-01-20 14:22:26.344 [main] INFO  client.MyClient - 등록할 개수을 입력하세요. >>
+2026-01-20 14:22:27.236 [main] INFO  client.MyClient - 상품이 추가 되었습니다.
+2026-01-20 14:22:27.236 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:22:27.236 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:22:27.236 [main] INFO  server.MyServer - {"method":"post","body":{"price":75,"name":"k","qty":44}}
+2026-01-20 14:22:29.713 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:22:29.713 [main] INFO  client.MyClient - {"msg":"ok"}
+2026-01-20 14:22:29.715 [main] ERROR client.MyClient - 예외 발생
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "list" is null
+	at client.ClientService.selectAll(ClientService.java:24)
+	at client.MyClient.main(MyClient.java:43)
+2026-01-20 14:22:29.725 [main] INFO  server.ProductRepository - list
+2026-01-20 14:23:16.681 [main] INFO  server.MyServer - [Server] 상품 관리 서버 시작 (Port: 20000)
+2026-01-20 14:23:19.194 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:23:19.196 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:23:19.198 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:23:19.199 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:23:21.632 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:23:21.933 [main] INFO  server.ProductRepository - 6
+2026-01-20 14:23:21.933 [main] INFO  client.MyClient - {"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":7,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":8,\"name\":\"k\",\"price\":75,\"qty\":44}]"}
+2026-01-20 14:23:21.951 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:23:21.951 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:23:26.909 [main] INFO  client.MyClient - 등록할 상품을 입력하세요. >>
+2026-01-20 14:23:29.242 [main] INFO  client.MyClient - 등록할 가격을 입력하세요. >>
+2026-01-20 14:23:30.103 [main] INFO  client.MyClient - 등록할 개수을 입력하세요. >>
+2026-01-20 14:23:30.586 [main] INFO  client.MyClient - 상품이 추가 되었습니다.
+2026-01-20 14:23:30.587 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:23:30.587 [main] INFO  server.MyServer - {"method":"post","body":{"price":3,"name":"n","qty":1}}
+2026-01-20 14:23:30.587 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:23:32.504 [main] INFO  client.MyClient - {"msg":"ok"}
+2026-01-20 14:23:32.504 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:23:32.507 [main] ERROR client.MyClient - 예외 발생
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "list" is null
+	at client.ClientService.selectAll(ClientService.java:24)
+	at client.MyClient.main(MyClient.java:43)
+2026-01-20 14:23:32.516 [main] INFO  server.ProductRepository - 7
+2026-01-20 14:25:53.507 [main] INFO  server.MyServer - [Server] 상품 관리 서버 시작 (Port: 20000)
+2026-01-20 14:25:58.508 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:25:58.511 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:25:58.512 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:25:58.512 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:26:01.748 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:26:02.032 [main] INFO  server.ProductRepository - findByAll size7
+2026-01-20 14:26:02.044 [main] INFO  server.MyServer - findbyAll : [{"id":1,"name":"a","price":3,"qty":5},{"id":2,"name":"f","price":4,"qty":6},{"id":3,"name":"h","price":3,"qty":7},{"id":6,"name":"h","price":4,"qty":3},{"id":7,"name":"h","price":4,"qty":3},{"id":8,"name":"k","price":75,"qty":44},{"id":9,"name":"n","price":3,"qty":1}]
+2026-01-20 14:26:02.045 [main] INFO  client.MyClient - {"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":7,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":8,\"name\":\"k\",\"price\":75,\"qty\":44},{\"id\":9,\"name\":\"n\",\"price\":3,\"qty\":1}]"}
+2026-01-20 14:26:02.053 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:26:02.053 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:26:12.335 [main] INFO  client.MyClient - 등록할 상품을 입력하세요. >>
+2026-01-20 14:26:16.492 [main] INFO  client.MyClient - 등록할 가격을 입력하세요. >>
+2026-01-20 14:26:17.679 [main] INFO  client.MyClient - 등록할 개수을 입력하세요. >>
+2026-01-20 14:26:18.132 [main] INFO  client.MyClient - 상품이 추가 되었습니다.
+2026-01-20 14:26:18.132 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:26:18.132 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:26:18.132 [main] INFO  server.MyServer - {"method":"post","body":{"price":7,"name":"y","qty":5}}
+2026-01-20 14:26:19.429 [main] INFO  client.MyClient - {"msg":"ok"}
+2026-01-20 14:26:19.429 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:26:19.443 [main] ERROR client.MyClient - 예외 발생
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "list" is null
+	at client.ClientService.selectAll(ClientService.java:24)
+	at client.MyClient.main(MyClient.java:43)
+2026-01-20 14:26:19.445 [main] INFO  server.ProductRepository - findByAll size8
+2026-01-20 14:26:19.445 [main] INFO  server.MyServer - findbyAll : [{"id":1,"name":"a","price":3,"qty":5},{"id":2,"name":"f","price":4,"qty":6},{"id":3,"name":"h","price":3,"qty":7},{"id":6,"name":"h","price":4,"qty":3},{"id":7,"name":"h","price":4,"qty":3},{"id":8,"name":"k","price":75,"qty":44},{"id":9,"name":"n","price":3,"qty":1},{"id":10,"name":"y","price":7,"qty":5}]
+2026-01-20 14:28:05.340 [main] INFO  server.MyServer - [Server] 상품 관리 서버 시작 (Port: 20000)
+2026-01-20 14:28:09.610 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:28:09.613 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:28:09.614 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:28:09.614 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:28:11.913 [main] INFO  client.MyClient - menu1
+2026-01-20 14:28:11.929 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:28:12.227 [main] INFO  server.ProductRepository - findByAll size8
+2026-01-20 14:28:12.231 [main] INFO  server.MyServer - findbyAll : [{"id":1,"name":"a","price":3,"qty":5},{"id":2,"name":"f","price":4,"qty":6},{"id":3,"name":"h","price":3,"qty":7},{"id":6,"name":"h","price":4,"qty":3},{"id":7,"name":"h","price":4,"qty":3},{"id":8,"name":"k","price":75,"qty":44},{"id":9,"name":"n","price":3,"qty":1},{"id":10,"name":"y","price":7,"qty":5}]
+2026-01-20 14:28:12.232 [main] INFO  client.MyClient - {"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":7,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":8,\"name\":\"k\",\"price\":75,\"qty\":44},{\"id\":9,\"name\":\"n\",\"price\":3,\"qty\":1},{\"id\":10,\"name\":\"y\",\"price\":7,\"qty\":5}]"}
+2026-01-20 14:28:12.240 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:28:12.241 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:28:19.913 [main] INFO  client.MyClient - menu2
+2026-01-20 14:28:19.913 [main] INFO  client.MyClient - 아이디 입력(숫자) >> 
+2026-01-20 14:28:22.695 [main] INFO  server.MyServer - {"method":"get","querystring":{"id":1}}
+2026-01-20 14:28:22.713 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:28:22.713 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:28:26.531 [main] INFO  client.MyClient - menu3
+2026-01-20 14:28:26.531 [main] INFO  client.MyClient - 등록할 상품을 입력하세요. >>
+2026-01-20 14:28:28.247 [main] INFO  client.MyClient - 등록할 가격을 입력하세요. >>
+2026-01-20 14:28:28.914 [main] INFO  client.MyClient - 등록할 개수을 입력하세요. >>
+2026-01-20 14:28:29.511 [main] INFO  client.MyClient - 상품이 추가 되었습니다.
+2026-01-20 14:28:29.511 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:28:29.511 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:28:29.511 [main] INFO  server.MyServer - {"method":"post","body":{"price":4,"name":"o","qty":3}}
+2026-01-20 14:28:34.367 [main] INFO  client.MyClient - menu1
+2026-01-20 14:28:34.368 [main] INFO  client.MyClient - {"msg":"ok"}
+2026-01-20 14:28:34.368 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:28:34.371 [main] ERROR client.MyClient - 예외 발생
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "list" is null
+	at client.ClientService.selectAll(ClientService.java:24)
+	at client.MyClient.main(MyClient.java:44)
+2026-01-20 14:28:34.379 [main] INFO  server.ProductRepository - findByAll size9
+2026-01-20 14:28:34.380 [main] INFO  server.MyServer - findbyAll : [{"id":1,"name":"a","price":3,"qty":5},{"id":2,"name":"f","price":4,"qty":6},{"id":3,"name":"h","price":3,"qty":7},{"id":6,"name":"h","price":4,"qty":3},{"id":7,"name":"h","price":4,"qty":3},{"id":8,"name":"k","price":75,"qty":44},{"id":9,"name":"n","price":3,"qty":1},{"id":10,"name":"y","price":7,"qty":5},{"id":11,"name":"o","price":4,"qty":3}]
+2026-01-20 14:31:04.641 [main] INFO  server.MyServer - [Server] 상품 관리 서버 시작 (Port: 20000)
+2026-01-20 14:31:08.601 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:31:08.601 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:31:08.601 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:31:08.601 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:31:11.496 [main] INFO  client.MyClient - menu1
+2026-01-20 14:31:11.528 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:31:11.815 [main] INFO  server.ProductRepository - findByAll size9
+2026-01-20 14:31:11.819 [main] INFO  server.MyServer - findbyAll : [{"id":1,"name":"a","price":3,"qty":5},{"id":2,"name":"f","price":4,"qty":6},{"id":3,"name":"h","price":3,"qty":7},{"id":6,"name":"h","price":4,"qty":3},{"id":7,"name":"h","price":4,"qty":3},{"id":8,"name":"k","price":75,"qty":44},{"id":9,"name":"n","price":3,"qty":1},{"id":10,"name":"y","price":7,"qty":5},{"id":11,"name":"o","price":4,"qty":3}]
+2026-01-20 14:31:11.820 [main] INFO  server.MyServer - server response={"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":7,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":8,\"name\":\"k\",\"price\":75,\"qty\":44},{\"id\":9,\"name\":\"n\",\"price\":3,\"qty\":1},{\"id\":10,\"name\":\"y\",\"price\":7,\"qty\":5},{\"id\":11,\"name\":\"o\",\"price\":4,\"qty\":3}]"}
+2026-01-20 14:31:11.820 [main] INFO  client.MyClient - {"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":7,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":8,\"name\":\"k\",\"price\":75,\"qty\":44},{\"id\":9,\"name\":\"n\",\"price\":3,\"qty\":1},{\"id\":10,\"name\":\"y\",\"price\":7,\"qty\":5},{\"id\":11,\"name\":\"o\",\"price\":4,\"qty\":3}]"}
+2026-01-20 14:31:11.829 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:31:11.830 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:31:30.086 [main] INFO  client.MyClient - menu3
+2026-01-20 14:31:30.086 [main] INFO  client.MyClient - 등록할 상품을 입력하세요. >>
+2026-01-20 14:31:37.031 [main] INFO  client.MyClient - 등록할 가격을 입력하세요. >>
+2026-01-20 14:31:37.855 [main] INFO  client.MyClient - 등록할 개수을 입력하세요. >>
+2026-01-20 14:31:38.225 [main] INFO  client.MyClient - 상품이 추가 되었습니다.
+2026-01-20 14:31:38.225 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:31:38.225 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:31:38.225 [main] INFO  server.MyServer - {"method":"post","body":{"price":5,"name":"d","qty":3}}
+2026-01-20 14:31:38.241 [main] INFO  server.MyServer - server response={"msg":"ok"}
+2026-01-20 14:31:46.835 [main] INFO  client.MyClient - menu1
+2026-01-20 14:31:46.848 [main] INFO  client.MyClient - {"msg":"ok"}
+2026-01-20 14:31:46.848 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:31:46.848 [main] ERROR client.MyClient - 예외 발생
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "list" is null
+	at client.ClientService.selectAll(ClientService.java:24)
+	at client.MyClient.main(MyClient.java:44)
+2026-01-20 14:31:46.856 [main] INFO  server.ProductRepository - findByAll size10
+2026-01-20 14:31:46.856 [main] INFO  server.MyServer - findbyAll : [{"id":1,"name":"a","price":3,"qty":5},{"id":2,"name":"f","price":4,"qty":6},{"id":3,"name":"h","price":3,"qty":7},{"id":6,"name":"h","price":4,"qty":3},{"id":7,"name":"h","price":4,"qty":3},{"id":8,"name":"k","price":75,"qty":44},{"id":9,"name":"n","price":3,"qty":1},{"id":10,"name":"y","price":7,"qty":5},{"id":11,"name":"o","price":4,"qty":3},{"id":12,"name":"d","price":5,"qty":3}]
+2026-01-20 14:31:46.856 [main] INFO  server.MyServer - server response={"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":7,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":8,\"name\":\"k\",\"price\":75,\"qty\":44},{\"id\":9,\"name\":\"n\",\"price\":3,\"qty\":1},{\"id\":10,\"name\":\"y\",\"price\":7,\"qty\":5},{\"id\":11,\"name\":\"o\",\"price\":4,\"qty\":3},{\"id\":12,\"name\":\"d\",\"price\":5,\"qty\":3}]"}
+2026-01-20 14:39:43.710 [main] INFO  server.MyServer - [Server] 상품 관리 서버 시작 (Port: 20000)
+2026-01-20 14:39:47.444 [main] INFO  server.MyServer - [Server] 클라이언트 접속: /127.0.0.1
+2026-01-20 14:39:47.444 [main] INFO  client.MyClient - ====== 상품 관리 시스템 접속 ======
+2026-01-20 14:39:47.444 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:39:47.444 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:39:50.249 [main] INFO  client.MyClient - menu1
+2026-01-20 14:39:50.274 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:39:50.556 [main] INFO  server.ProductRepository - findByAll size10
+2026-01-20 14:39:50.556 [main] INFO  server.MyServer - findbyAll : [{"id":1,"name":"a","price":3,"qty":5},{"id":2,"name":"f","price":4,"qty":6},{"id":3,"name":"h","price":3,"qty":7},{"id":6,"name":"h","price":4,"qty":3},{"id":7,"name":"h","price":4,"qty":3},{"id":8,"name":"k","price":75,"qty":44},{"id":9,"name":"n","price":3,"qty":1},{"id":10,"name":"y","price":7,"qty":5},{"id":11,"name":"o","price":4,"qty":3},{"id":12,"name":"d","price":5,"qty":3}]
+2026-01-20 14:39:50.556 [main] INFO  server.MyServer - server response={"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":7,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":8,\"name\":\"k\",\"price\":75,\"qty\":44},{\"id\":9,\"name\":\"n\",\"price\":3,\"qty\":1},{\"id\":10,\"name\":\"y\",\"price\":7,\"qty\":5},{\"id\":11,\"name\":\"o\",\"price\":4,\"qty\":3},{\"id\":12,\"name\":\"d\",\"price\":5,\"qty\":3}]"}
+2026-01-20 14:39:50.556 [main] INFO  client.MyClient - {"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":7,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":8,\"name\":\"k\",\"price\":75,\"qty\":44},{\"id\":9,\"name\":\"n\",\"price\":3,\"qty\":1},{\"id\":10,\"name\":\"y\",\"price\":7,\"qty\":5},{\"id\":11,\"name\":\"o\",\"price\":4,\"qty\":3},{\"id\":12,\"name\":\"d\",\"price\":5,\"qty\":3}]"}
+2026-01-20 14:39:50.572 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:39:50.572 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:39:52.407 [main] INFO  client.MyClient - menu3
+2026-01-20 14:39:52.407 [main] INFO  client.MyClient - 등록할 상품을 입력하세요. >>
+2026-01-20 14:39:54.055 [main] INFO  client.MyClient - 등록할 가격을 입력하세요. >>
+2026-01-20 14:39:54.815 [main] INFO  client.MyClient - 등록할 개수을 입력하세요. >>
+2026-01-20 14:39:55.266 [main] INFO  server.MyServer - {"method":"post","body":{"price":5,"name":"r","qty":3}}
+2026-01-20 14:39:55.282 [main] INFO  server.MyServer - server response={"msg":"ok"}
+2026-01-20 14:39:55.282 [main] INFO  client.MyClient - 상품이 추가 되었습니다.
+2026-01-20 14:39:55.282 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:39:55.282 [main] INFO  client.MyClient - 번호입력 >> 
+2026-01-20 14:39:56.210 [main] INFO  client.MyClient - menu1
+2026-01-20 14:39:56.210 [main] INFO  server.MyServer - {"method":"get"}
+2026-01-20 14:39:56.227 [main] INFO  server.ProductRepository - findByAll size11
+2026-01-20 14:39:56.228 [main] INFO  server.MyServer - findbyAll : [{"id":1,"name":"a","price":3,"qty":5},{"id":2,"name":"f","price":4,"qty":6},{"id":3,"name":"h","price":3,"qty":7},{"id":6,"name":"h","price":4,"qty":3},{"id":7,"name":"h","price":4,"qty":3},{"id":8,"name":"k","price":75,"qty":44},{"id":9,"name":"n","price":3,"qty":1},{"id":10,"name":"y","price":7,"qty":5},{"id":11,"name":"o","price":4,"qty":3},{"id":12,"name":"d","price":5,"qty":3},{"id":13,"name":"r","price":5,"qty":3}]
+2026-01-20 14:39:56.228 [main] INFO  server.MyServer - server response={"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":7,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":8,\"name\":\"k\",\"price\":75,\"qty\":44},{\"id\":9,\"name\":\"n\",\"price\":3,\"qty\":1},{\"id\":10,\"name\":\"y\",\"price\":7,\"qty\":5},{\"id\":11,\"name\":\"o\",\"price\":4,\"qty\":3},{\"id\":12,\"name\":\"d\",\"price\":5,\"qty\":3},{\"id\":13,\"name\":\"r\",\"price\":5,\"qty\":3}]"}
+2026-01-20 14:39:56.228 [main] INFO  client.MyClient - {"msg":"ok","body":"[{\"id\":1,\"name\":\"a\",\"price\":3,\"qty\":5},{\"id\":2,\"name\":\"f\",\"price\":4,\"qty\":6},{\"id\":3,\"name\":\"h\",\"price\":3,\"qty\":7},{\"id\":6,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":7,\"name\":\"h\",\"price\":4,\"qty\":3},{\"id\":8,\"name\":\"k\",\"price\":75,\"qty\":44},{\"id\":9,\"name\":\"n\",\"price\":3,\"qty\":1},{\"id\":10,\"name\":\"y\",\"price\":7,\"qty\":5},{\"id\":11,\"name\":\"o\",\"price\":4,\"qty\":3},{\"id\":12,\"name\":\"d\",\"price\":5,\"qty\":3},{\"id\":13,\"name\":\"r\",\"price\":5,\"qty\":3}]"}
+2026-01-20 14:39:56.231 [main] INFO  client.MyClient - 
+1.목록조회 2.상세조회  3.추가  4.삭제  5.종료
+2026-01-20 14:39:56.231 [main] INFO  client.MyClient - 번호입력 >> 
