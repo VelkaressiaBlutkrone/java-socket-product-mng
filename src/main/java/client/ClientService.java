@@ -33,8 +33,7 @@ public class ClientService {
     public static void selectDetail(String result) {
         ResponseDto dto = jsonToResDto(result);
 
-        Type type = new TypeToken<Product>() {
-        }.getType();
+        Type type = new TypeToken<Product>() {}.getType();
         Product prd = new Gson().fromJson(dto.getBody(), type);
         System.out.println(
                 prd.getId() + " | " +
