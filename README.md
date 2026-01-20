@@ -88,8 +88,8 @@ src/main/java/server/DbConnection.java 파일에서 데이터베이스 정보 �
 
 ```java
 String url = "jdbc:mysql://localhost:3306/productdb";
-String username = "root";          // 본인의 MySQL 사용자명
-String password = "bitc5600!";     // 본인의 MySQL 비밀번호
+String username = "본인의 MySQL 사용자명";
+String password = "본인의 MySQL 비밀번호";
 ```
 
 ### 3단계: 서버 실행
