@@ -67,11 +67,15 @@ USE productdb;
 
 -- 상품 테이블 생성
 CREATE TABLE product (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    price INT NOT NULL,
-    qty INT NOT NULL
-);
+    id INT NOT NULL AUTO_INCREMENT COMMENT '상품 ID',
+    name VARCHAR(255) NOT NULL COMMENT '상품명',
+    price INT NOT NULL COMMENT '가격',
+    qty INT NOT NULL COMMENT '재고 수량',
+    PRIMARY KEY (id)
+) ENGINE=InnoDB
+  DEFAULT CHARSET=utf8mb4
+  COLLATE=utf8mb4_unicode_ci;
+
 
 -- 초기 샘플 데이터 삽입 (선택)
 INSERT INTO product (name, price, qty) VALUES ('상품1', 10000, 5);
