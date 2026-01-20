@@ -57,13 +57,18 @@ java-socket-product-mng/
 ### 1단계: 데이터베이스 설정
 
 MySQL에 접속하여 다음 명령어 실행:
-
+```
 -- 데이터베이스 생성
 CREATE DATABASE productdb;
+```
 
+```
 -- 데이터베이스 선택
-USE productdb;
 
+USE productdb;
+```
+
+```
 -- 상품 테이블 생성
 CREATE TABLE product (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -71,6 +76,7 @@ CREATE TABLE product (
     price INT NOT NULL,
     qty INT NOT NULL
 );
+```
 
 -- 초기 샘플 데이터 삽입 (선택)
 
@@ -93,8 +99,10 @@ String password = "bitc5600!";     // 본인의 MySQL 비밀번호
 
 터미널 1에서 서버 시작:
 
+```
 ./gradlew build
 java -cp build/libs/java-socket-product-mng-1.0-SNAPSHOT.jar server.MyServer
+```
 
 또는 IDE(IntelliJ, Eclipse 등)에서 MyServer 클래스를 직접 실행
 
@@ -102,7 +110,9 @@ java -cp build/libs/java-socket-product-mng-1.0-SNAPSHOT.jar server.MyServer
 
 터미널 2에서 클라이언트 시작:
 
+```
 java -cp build/libs/java-socket-product-mng-1.0-SNAPSHOT.jar client.MyClient
+```
 
 또는 IDE에서 MyClient 클래스를 직접 실행
 
@@ -125,16 +135,20 @@ java -cp build/libs/java-socket-product-mng-1.0-SNAPSHOT.jar client.MyClient
 
 ### 요청 (RequestDto)
 
+```
 {  "method": "get|post|delete",
   "querystring": {"id": 1},
   "body": {"name": "상품명", "price": 10000, "qty": 5}
 }
+```
 
 ### 응답 (ResponseDto)
 
+```
 {  "msg": "ok|error",
   "body": "JSON 형태의 데이터"
 }
+```
 
 ---
 
