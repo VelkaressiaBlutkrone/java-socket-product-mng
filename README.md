@@ -33,6 +33,7 @@ java-socket-product-mng/
 │       └── ResponseDto.java       # 서버 응답 DTO
 ├── build.gradle                   # Gradle 의존성 설정
 └── settings.gradle                # Gradle 설정
+```
 
 ### 사용 기술 & 라이브러리
 - **언어**: Java
@@ -43,7 +44,6 @@ java-socket-product-mng/
 - **로깅**: SLF4J, Logback
 - **유틸리티**: Lombok
 - **드라이버**: MySQL JDBC Connector
-```
 
 ---
 
