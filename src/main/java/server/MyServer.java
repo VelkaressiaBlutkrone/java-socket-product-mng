@@ -72,7 +72,6 @@ public class MyServer {
 
                 String res = responseDtoToJson(resDto);
                 out.println(res);
-
             }
         } catch (IOException e) {
             logger.atTrace().setCause(e).log(e.getMessage());

@@ -14,8 +14,7 @@ public class ClientService {
     public static void selectAll(String result) {
         ResponseDto dto = jsonToResDto(result);
 
-        Type type = new TypeToken<List<Product>>() {
-        }.getType();
+        Type type = new TypeToken<List<Product>>() {}.getType();
         List<Product> list = new Gson().fromJson(dto.getBody(), type);
 
         System.out.printf("%-6s | %-10s | %-6s | %-6s%n",

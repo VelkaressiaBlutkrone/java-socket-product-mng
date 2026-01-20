@@ -79,7 +79,6 @@ public class MyClient {
                         } catch (Exception e) {
                             logger.atTrace().setCause(e).log("Exception occurred");
                         }
-
                     }
                         break;
                     case "4": {
@@ -90,7 +89,6 @@ public class MyClient {
                                 null);
 
                         out.println(reqStr);
-
                         logger.atInfo().log("상품이 삭제 되었습니다.");
                     }
                         break;
@@ -99,12 +97,9 @@ public class MyClient {
                     }
                         break;
                 }
-
             }
-
         } catch (Exception e) {
             logger.atError().setCause(e).log("예외 발생");
         }
     }
-
 }

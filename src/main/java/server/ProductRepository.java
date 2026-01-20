@@ -50,13 +50,12 @@ public class ProductRepository {
             ResultSet rs = pstmt.executeQuery();
             rs.next();
 
-            Product product = Product.builder()
+            return Product.builder()
                     .id(rs.getInt("id"))
                     .name(rs.getString("name"))
                     .price(rs.getInt("price"))
                     .qty(rs.getInt("qty"))
                     .build();
-            return product;
         }
 
     }
